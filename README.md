@@ -2,11 +2,11 @@
 
 A responsive website for **The User, Plural: Heterogeneity and Interaction in User Simulation**, a one-day workshop co-located with COLING 2027 in Macau, China. Eight static HTML pages share a stylesheet, self-hosted fonts, and a small JavaScript navigation enhancement. There is no build step, package installation, or runtime dependency, and the content remains available without JavaScript.
 
-- Repository: [UserPlural/website](https://github.com/UserPlural/website)
-- Live website: [userplural.github.io/website/](https://userplural.github.io/website/)
+- Repository: [UserPlural/userplural.github.io](https://github.com/UserPlural/userplural.github.io)
+- Live website: [userplural.github.io](https://userplural.github.io/)
 - Official workshop contact: [theuserplural@gmail.com](mailto:theuserplural@gmail.com)
 
-GitHub Pages is enabled for this repository using branch publication. Changes merged or committed to the `main` branch at the repository root publish automatically. Keep that configuration unless deliberately switching to the optional manual Actions workflow below.
+The repository has been renamed to `userplural.github.io` and serves the root address above. GitHub Pages uses branch publication: changes merged or committed to the `main` branch at the repository root publish automatically. Keep that configuration unless deliberately switching to the optional manual Actions workflow below.
 
 ## Content and status
 
@@ -32,12 +32,13 @@ The workshop accepts both archival and non-archival submissions and supports hyb
 | `assets/fonts/` | Self-hosted Newsreader and Atkinson Hyperlegible Next, with their SIL Open Font License files |
 | `assets/` | Shared public assets, including approved images when present |
 | `.nojekyll` | Direct static-file publication |
+| `website/*.html` | Redirects from the eight former `/website/` page addresses |
 | `scripts/check_site.py` | Offline link and asset check; requires Python 3 |
 | `.github/workflows/pages.yml` | Optional manually triggered publication workflow |
 
 Edit the relevant HTML file directly; no build step follows. Keep shared navigation, the workshop title, contact details, and footer information consistent across the eight pages. The official contact address is `theuserplural@gmail.com`. When confirming information, update its status label, associated date or link, and explanatory note everywhere that information appears. Add the workshop-specific OpenReview URL only when it is ready. Preserve the accepted proposal's scientific framing when editing the overview and research themes.
 
-Use relative links such as `themes.html` and `assets/styles.css`, so the site works under the `/website/` project path. Keep all eight HTML pages in the repository root. The optional publication workflow lists those pages explicitly and copies the entire audited `assets/` directory. When adding another page, update that allowlist, the navigation, and the validation script as needed. Keep image credits and license notices with any approved photographs.
+Use relative links such as `themes.html` and `assets/styles.css`. Keep all eight content pages in the repository root, where they serve directly from `https://userplural.github.io/`. The optional publication workflow lists those pages explicitly and copies the entire audited `assets/` directory and the `website/` redirects. When adding another page, update that allowlist, the navigation, and the validation script as needed. Keep image credits and license notices with any approved photographs.
 
 ## Design
 
@@ -54,26 +55,34 @@ python3 scripts/check_site.py
 python3 -m http.server 8000
 ```
 
-Open [localhost:8000](http://localhost:8000/). Stop the server with Control-C. To check the project path from a clone named `website`, start the server in the clone's parent directory and open [localhost:8000/website/](http://localhost:8000/website/).
+Open [localhost:8000](http://localhost:8000/), serving from the repository root. Stop the server with Control-C. The local clone directory can retain its current name; it does not determine the published address. The pages inside `website/` deliberately redirect to the absolute production URLs, including during a local preview.
 
 Inspect every page at phone and desktop widths, including navigation, keyboard focus, links between pages, and content. The script checks required files, duplicate IDs, local assets, internal anchors, relative paths, and obvious placeholder links. It does not verify external services or workshop facts.
 
+## Root address and former links
+
+The repository was renamed from `website` to `userplural.github.io`, preserving its history. GitHub requires the `<owner>.github.io` repository name for an account's root site. [GitHub Pages URL conventions](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+
+If a local clone still uses the old remote, update it with `git remote set-url origin https://github.com/UserPlural/userplural.github.io.git`. The local directory itself does not need to be renamed. The required Pages source remains **Deploy from a branch → main → /(root)**.
+
+GitHub does not automatically redirect renamed project-site URLs. The eight pages in `website/` provide explicit HTML redirects from the old `/website/` addresses to the corresponding root pages, with visible fallback links. Keep them to preserve existing bookmarks. Do not recreate a separate repository named `website` for this purpose; doing so would remove GitHub's redirect for the renamed repository itself. [GitHub repository rename behavior](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository).
+
 ## Update the live site from the `main` branch
 
-1. Edit the relevant root HTML pages and shared assets in [UserPlural/website](https://github.com/UserPlural/website), preview them, and commit or merge the changes to `main`. Keep all eight pages listed above, `assets/`, and `.nojekyll` at the repository root; do not upload an enclosing `website` or `the-user-plural` directory. The README, validation script, and optional workflow can also live in the repository. [GitHub site setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
-2. The existing [Settings → Pages](https://github.com/UserPlural/website/settings/pages) configuration should remain **Source → Deploy from a branch**, **main**, **/(root)**. No settings change is required for a normal content update. If restoring the configuration, select those values and **Save**. [GitHub publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-3. Follow the deployment in [Actions](https://github.com/UserPlural/website/actions). Once it succeeds, open [https://userplural.github.io/website/](https://userplural.github.io/website/). Check all eight pages, styles, images, favicon, mobile navigation, and the official contact link. GitHub says publication can take up to ten minutes. [GitHub publication and verification](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+1. Edit the relevant root HTML pages and shared assets in [UserPlural/userplural.github.io](https://github.com/UserPlural/userplural.github.io), preview them, and commit or merge the changes to `main`. Keep all eight content pages, `assets/`, `website/`, and `.nojekyll` at the repository root. Only the compatibility redirects belong inside `website/`; do not nest the full site in an enclosing folder. The README, validation script, and optional workflow can also live in the repository. [GitHub site setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+2. The existing [Settings → Pages](https://github.com/UserPlural/userplural.github.io/settings/pages) configuration should remain **Source → Deploy from a branch**, **main**, **/(root)**. No settings change is required for a normal content update. If restoring the configuration, select those values and **Save**. [GitHub publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+3. Follow the deployment in [Actions](https://github.com/UserPlural/userplural.github.io/actions). Once it succeeds, open [https://userplural.github.io/](https://userplural.github.io/). Check all eight pages, styles, images, favicon, mobile navigation, the official contact link, and redirects from the old `/website/` addresses. GitHub says publication can take up to ten minutes. [GitHub publication and verification](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
-GitHub project sites use the account name and repository name in their default address. A future custom domain may change that address. [GitHub Pages URL conventions](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+The `userplural.github.io` repository serves the account's root address without a repository-name path. A future custom domain may change that address. [GitHub Pages URL conventions](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
 Keep only intended public material in this repository. `.nojekyll` disables Jekyll processing; it does not hide other files. [GitHub static-file publishing](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
 ## Optional manual Actions publication
 
-Use this alternative if maintainers prefer to publish each update explicitly. The included workflow stages the eight root HTML pages, the audited `assets/` directory, and `.nojekyll`. It excludes the README, validation script, and other repository files from the deployed artifact.
+Use this alternative if maintainers prefer to publish each update explicitly. The included workflow stages the eight root HTML pages, the audited `assets/` directory, the `website/` redirects, and `.nojekyll`. It excludes the README, validation script, and other repository files from the deployed artifact.
 
 1. Commit the site files, `scripts/check_site.py`, and `.github/workflows/pages.yml` to `main`.
-2. In [Settings → Pages](https://github.com/UserPlural/website/settings/pages), set **Source → GitHub Actions** instead of branch publication.
+2. In [Settings → Pages](https://github.com/UserPlural/userplural.github.io/settings/pages), set **Source → GitHub Actions** instead of branch publication.
 3. Open **Actions → Publish workshop website → Run workflow**, choose `main`, and run it. The workflow has no push trigger and only publishes from the default branch.
 4. Follow the deployment link and verify the live site. Run the workflow again when each subsequent content update is ready to publish.
 

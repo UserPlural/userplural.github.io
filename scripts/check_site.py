@@ -129,7 +129,7 @@ def read_page(path):
 def local_target(url, origin):
     path = unquote(url.path)
     if path.startswith("/") or "\\" in path:
-        raise ValueError("use a relative path compatible with /website/")
+        raise ValueError("use a relative path within the site")
     target = (origin.parent / path).resolve() if path else origin
     try:
         target.relative_to(ROOT)
