@@ -1,0 +1,26 @@
+Organizer portraits
+Downloaded from the organizers' official profiles on October 14, 2026 at the workshop organizer's request. The image files are unchanged. The website displays circular crops through CSS. All rights remain with the original rights holders; no new license is asserted for these portraits.
+
+Ziwei (Sara) Gong — ziwei-gong.jpg
+Profile: https://ziweig.github.io/ziweigong/
+Image: https://ziweig.github.io/ziweigong/images/IMG_2504.jpg
+
+Lin Ai — lin-ai.jpg
+Profile: https://www.microsoft.com/en-us/research/people/lai/
+Image: https://www.microsoft.com/en-us/research/wp-content/uploads/2025/11/IMG_2847-360x360.jpg
+
+Bolei Ma — bolei-ma.png
+Profile: https://boleima.github.io/
+Image: https://boleima.github.io/icons/bm2.png
+
+Siyu Liang — siyu-liang.jpg
+Profile: https://siyuliang.github.io/
+Image: https://siyuliang.github.io/assets/img/prof_pic.jpg?88212529af5095eeb125f2685de832b3
+
+Victor Soares Bursztyn — victor-bursztyn.png
+Profile: https://research.adobe.com/person/victor-s-bursztyn/
+Image: https://research.adobe.com/wp-content/uploads/2024/10/victor.png
+
+Julia Hirschberg — julia-hirschberg.jpg
+Profile: https://www1.cs.columbia.edu/~julia/
+Image: https://www1.cs.columbia.edu/~julia/images/hirschberg_portrait.jpg

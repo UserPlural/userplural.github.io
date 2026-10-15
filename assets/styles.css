@@ -74,7 +74,7 @@ tbody tr:nth-child(even){background:#f8f9fa}
 .dates-table th:first-child{width:65%}
 .dates-table td{white-space:nowrap}
 .table-note{font-size:12px;color:var(--muted);font-weight:400}
-.details-table th{width:65%}
+.details-table th{width:38%}
 .organizers-table tbody th{font-weight:600;width:37%}
 .contact-email{font-size:21px;margin:22px 0 28px;overflow-wrap:anywhere}
 .site-footer{border-top:1px solid var(--line);background:#f6f7f8;color:#59636a;font-size:12px;padding:25px 0}
@@ -86,3 +86,21 @@ tbody tr:nth-child(even){background:#f8f9fa}
 @media(max-width:800px){.container{width:calc(100% - 40px)}.masthead{min-height:76px;flex-wrap:wrap;gap:0;padding-block:15px}.masthead p{display:none}.site-name{font-size:23px}.menu-toggle:not([hidden]){display:block}.nav-bar nav{flex-wrap:wrap;justify-content:flex-start;padding-block:6px;gap:0 20px}nav a,nav a:first-child,nav a:last-child{font-size:13px;padding:9px 0 7px}.js nav:not(.is-open){display:none}.js .nav-bar:has(nav:not(.is-open)){border-top:0}.home-columns{grid-template-columns:minmax(0,1fr) 215px;gap:28px}.welcome-banner h1{font-size:36px}.welcome-banner{padding:27px 0 22px}.workshop-subtitle{font-size:21px}.workshop-context{font-size:14px}.workshop-date{font-size:14px}.interior{padding-top:20px}h1{font-size:30px}}
 @media(max-width:620px){body{font-size:15px;line-height:1.75}.home-columns{display:block;padding-top:18px;padding-bottom:30px}.sidebar{border-top:1px solid var(--line);margin-top:30px;padding-top:26px}.sidebar section{margin-bottom:27px}.sidebar h2{font-size:19px}.sidebar .small{font-size:13px}.city-banner figcaption{font-size:9px;text-align:left}.welcome-banner h1{font-size:32px}.workshop-subtitle{font-size:20px;margin-bottom:13px}.workshop-context{max-width:320px;margin-inline:auto;font-size:13px}.workshop-date{font-size:13px;margin-top:5px}h2{font-size:21px;margin-top:28px}blockquote{font-size:17px;padding-left:15px}.page-heading{margin-bottom:23px}.reading-width{max-width:100%}.interior{padding-bottom:35px;min-height:calc(100vh - 260px)}.notice{padding:12px 14px;font-size:14px}table{font-size:13px;line-height:1.6}th,td{padding:12px 10px}.dates-table th:first-child{width:62%}.dates-table td{white-space:normal}.table-note{display:block;font-size:11px}.organizers-table tbody th{width:43%}.organizers-table td{overflow-wrap:normal}.contact-email{font-size:19px}.footer-inner{display:block}.footer-inner>p:last-child{text-align:left;margin-top:14px}.site-footer{font-size:11px}.site-name{font-size:22px}}
 @media print{body{font-size:11pt;background:white;color:black}.container{width:100%}.nav-bar,.menu-toggle,.skip-link,.breadcrumb,.city-banner{display:none!important}.masthead{min-height:0;padding-bottom:15px}.masthead p{display:block}.home-columns{display:block}.sidebar{border-top:1px solid #999}.welcome-banner{padding:15px 0}.welcome-banner h1{font-size:28pt}.workshop-subtitle{font-size:16pt}.interior{min-height:0;padding-top:10px;padding-bottom:15px}h1{font-size:24pt}h2{font-size:16pt}a{color:black}.notice{background:white;border:1px solid #999}tr,.topic-section{break-inside:avoid}.site-footer{background:white}.page-heading h1::after{display:none}}
+
+/* Organizing committee portraits, sourced from official profiles. */
+.organizer-profiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 32px;margin:36px 0 24px}
+.organizer-profile{text-align:center}
+.portrait-link{display:inline-block;border-radius:50%;line-height:0;overflow:hidden;width:160px;height:160px}
+.portrait{display:block;width:160px;height:160px;object-fit:cover;border-radius:50%;background:#edf2f5}
+.portrait-ziwei{object-position:50% 40%}
+.portrait-siyu{object-position:50% 60%;transform:scale(1.5);transform-origin:50% 60%}
+.organizer-profile h2{font-size:18px;margin:15px 0 5px}
+.organizer-profile h2 a{text-decoration:none}
+.organizer-profile h2 a:hover{text-decoration:underline}
+.organizer-profile p{font-size:14px;line-height:1.6;margin:0;color:var(--muted)}
+.photo-note{font-size:11px;color:var(--muted);margin-top:28px}
+.reviewers-section{border-top:1px solid var(--line);margin-top:30px;padding-top:4px}
+@media(max-width:800px){.organizer-profiles{gap:30px 20px}.portrait-link,.portrait{width:145px;height:145px}.organizer-profile h2{font-size:16px}.organizer-profile p{font-size:13px}}
+@media(max-width:620px){.organizer-profiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px;margin-top:28px}.portrait-link,.portrait{width:130px;height:130px}.organizer-profile h2{font-size:16px}.details-table th{width:38%}}
+@media(max-width:360px){.portrait-link,.portrait{width:112px;height:112px}.organizer-profiles{gap:26px 16px}.organizer-profile h2{font-size:15px}}
+@media print{.organizer-profiles{grid-template-columns:repeat(3,1fr);gap:20px}.portrait-link,.portrait{width:100px;height:100px}.organizer-profile{break-inside:avoid}}

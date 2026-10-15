@@ -12,7 +12,7 @@ GitHub Pages is enabled for this repository using branch publication. Changes me
 
 The website's scientific content has been compared with the accepted proposal. It retains the proposal's four research directions, emphasis on interactional fidelity and user heterogeneity, fit-for-purpose validity, and scope boundary. The workshop includes offline and interactive uses of user simulation. Multi-agent work is in scope when its primary object is user behavior or user-facing AI; macro-scale social simulation is outside the scope.
 
-Confirmed information and provisional plans have separate labels. The exact workshop day, submission URL, final submission rules, speaker lineup, and sponsorship arrangements remain unannounced. ARR commitments and direct submissions through OpenReview are planned; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates are displayed as TBD. Publish a date only after workshop-specific confirmation; May 9–14, 2027 refers to the COLING conference, not the workshop day.
+The workshop accepts both archival and non-archival submissions and supports hybrid in-person and online presentation and attendance, as confirmed by the organizers. Paper preparation and review follow the linked ACL/ARR requirements. Direct submissions and ARR commitments through OpenReview are accepted routes; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates remain TBD. May 9–14, 2027 refers to the COLING conference, not the workshop day. The program, final speaker lineup, and reviewer application form will be announced separately. No sponsorship arrangements have been announced.
 
 ## Files and editing
 
@@ -24,7 +24,7 @@ Confirmed information and provisional plans have separate labels. The exact work
 | `dates.html` | Important dates: unconfirmed milestones are TBD |
 | `submissions.html` | Submission information and portal status |
 | `program.html` | Program and speaker announcements |
-| `organizers.html` | Organizing committee |
+| `organizers.html` | Organizer portraits and reviewer invitation |
 | `contact.html` | Official workshop contact details |
 | `assets/styles.css` | Layout, typography, responsive behavior, and print styles |
 | `assets/site.js` | Navigation enhancement |
@@ -72,8 +72,12 @@ Use this alternative if maintainers prefer to publish each update explicitly. Th
 
 The workflow uses GitHub's Pages actions and the `github-pages` environment. If the organization requires approval for that environment, use its existing review process. [GitHub custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-## Photograph
+## Photographs
 
 The homepage photograph is [Macau skyline from Taipa (2013)](https://commons.wikimedia.org/wiki/File:Macau_skyline_2013_(panorama).JPG), by [Mimihitam](https://commons.wikimedia.org/wiki/User:Mimihitam), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). The original file is included without modification and scaled proportionally for display. Preserve its visible attribution and `assets/photo-credit.txt`. This license applies to the photograph.
+
+Organizer portraits are copied from each organizer’s official profile, as requested by the workshop organizers. Preserve the profile links and the source records in `assets/organizers/sources.txt`; no reuse license is asserted for those portraits.
+
+Submission guidance follows the current [ARR call](https://aclrollingreview.org/cfp), [ACL formatting requirements](https://acl-org.github.io/ACLPUB/formatting.html), [official templates](https://github.com/acl-org/acl-style-files), [Responsible NLP checklist](https://aclrollingreview.org/responsibleNLPresearch/), and [ARR commitment guidance](https://aclrollingreview.org/authors#step-5-commitment). Maintain those links when requirements change. Ensure the direct-submission form includes the checklist fields.
 
 Deployment guidance checked against GitHub documentation on October 14, 2026.
