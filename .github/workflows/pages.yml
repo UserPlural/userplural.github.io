@@ -31,9 +31,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Stage public website files
         run: |
-          mkdir -p _site/assets
-          cp index.html .nojekyll _site/
-          cp assets/styles.css assets/site.js assets/favicon.svg _site/assets/
+          mkdir -p _site
+          cp index.html themes.html cfp.html dates.html submissions.html program.html organizers.html contact.html .nojekyll _site/
+          cp -R assets _site/assets
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:

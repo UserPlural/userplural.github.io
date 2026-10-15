@@ -1,26 +1,24 @@
-/* Progressive enhancement: all workshop information is available without JavaScript. */
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('#primary-nav');
-if (menuButton && navigation) {
-  menuButton.hidden = false;
+// The navigation remains visible when JavaScript is unavailable.
+(() => {
+  const button = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('#primary-nav');
+  if (!button || !navigation) return;
   document.documentElement.classList.add('js');
-  const closeMenu = () => {
-    menuButton.setAttribute('aria-expanded', 'false');
+  button.hidden = false;
+  const close = () => {
+    button.setAttribute('aria-expanded', 'false');
     navigation.classList.remove('is-open');
   };
-  menuButton.addEventListener('click', () => {
-    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!isOpen));
-    navigation.classList.toggle('is-open', !isOpen);
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') !== 'true';
+    button.setAttribute('aria-expanded', String(open));
+    navigation.classList.toggle('is-open', open);
   });
-  navigation.addEventListener('click', (event) => {
-    if (event.target.closest('a')) closeMenu();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
-      closeMenu();
-      menuButton.focus();
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      close();
+      button.focus();
     }
   });
-  window.matchMedia('(min-width: 960px)').addEventListener('change', closeMenu);
-}
+  window.matchMedia('(min-width: 801px)').addEventListener('change', close);
+})();
