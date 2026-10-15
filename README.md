@@ -12,7 +12,7 @@ GitHub Pages is enabled for this repository using branch publication. Changes me
 
 The website's scientific content has been compared with the accepted proposal. It retains the proposal's four research directions, emphasis on interactional fidelity and user heterogeneity, fit-for-purpose validity, and scope boundary. The workshop includes offline and interactive uses of user simulation. Multi-agent work is in scope when its primary object is user behavior or user-facing AI; macro-scale social simulation is outside the scope.
 
-The workshop accepts both archival and non-archival submissions and supports hybrid in-person and online presentation and attendance, as confirmed by the organizers. Paper preparation and review follow the linked ACL/ARR requirements. Direct submissions and ARR commitments through OpenReview are accepted routes; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates remain TBD. May 9–14, 2027 refers to the COLING conference, not the workshop day. The program, final speaker lineup, and reviewer application form will be announced separately. The program committee lists only members confirmed in the accepted proposal; tentative members are not listed. No sponsorship arrangements have been announced.
+The workshop accepts both archival and non-archival submissions and supports hybrid in-person and online presentation and attendance, as confirmed by the organizers. Paper preparation and review follow the linked ACL/ARR requirements. Direct submissions and ARR commitments through OpenReview are accepted routes; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates remain TBD. May 9–14, 2027 refers to the COLING conference, not the workshop day. The program, final speaker lineup, and reviewer application form will be announced separately. The reviewer roster is not published at this stage. No sponsorship arrangements have been announced.
 
 ## Files and editing
 
@@ -24,7 +24,7 @@ The workshop accepts both archival and non-archival submissions and supports hyb
 | `dates.html` | Important dates: unconfirmed milestones are TBD |
 | `submissions.html` | Submission information and portal status |
 | `program.html` | Program and speaker announcements |
-| `organizers.html` | Organizer portraits, program committee, and reviewer invitation |
+| `organizers.html` | Organizer portraits and reviewer invitation |
 | `contact.html` | Official workshop contact details |
 | `assets/styles.css` | Layout, typography, responsive behavior, and print styles |
 | `assets/site.js` | Navigation menu and organizer bio dialog |
