@@ -1,6 +1,6 @@
 # The User, Plural — workshop website
 
-A responsive website for **The User, Plural: Heterogeneity and Interaction in User Simulation**, a one-day workshop co-located with COLING 2027 in Macau, China. Eight static HTML pages share a stylesheet and a small JavaScript navigation enhancement. There is no build step, package installation, or runtime dependency, and the content remains available without JavaScript.
+A responsive website for **The User, Plural: Heterogeneity and Interaction in User Simulation**, a one-day workshop co-located with COLING 2027 in Macau, China. Eight static HTML pages share a stylesheet, self-hosted fonts, and a small JavaScript navigation enhancement. There is no build step, package installation, or runtime dependency, and the content remains available without JavaScript.
 
 - Repository: [UserPlural/website](https://github.com/UserPlural/website)
 - Live website: [userplural.github.io/website/](https://userplural.github.io/website/)
@@ -12,7 +12,7 @@ GitHub Pages is enabled for this repository using branch publication. Changes me
 
 The website's scientific content has been compared with the accepted proposal. It retains the proposal's four research directions, emphasis on interactional fidelity and user heterogeneity, fit-for-purpose validity, and scope boundary. The workshop includes offline and interactive uses of user simulation. Multi-agent work is in scope when its primary object is user behavior or user-facing AI; macro-scale social simulation is outside the scope.
 
-The workshop accepts both archival and non-archival submissions and supports hybrid in-person and online presentation and attendance, as confirmed by the organizers. Paper preparation and review follow the linked ACL/ARR requirements. Direct submissions and ARR commitments through OpenReview are accepted routes; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates remain TBD. May 9–14, 2027 refers to the COLING conference, not the workshop day. The program, final speaker lineup, and reviewer application form will be announced separately. No sponsorship arrangements have been announced.
+The workshop accepts both archival and non-archival submissions and supports hybrid in-person and online presentation and attendance, as confirmed by the organizers. Paper preparation and review follow the linked ACL/ARR requirements. Direct submissions and ARR commitments through OpenReview are accepted routes; the workshop-specific portal URL will be announced when ready. All unconfirmed workshop dates remain TBD. May 9–14, 2027 refers to the COLING conference, not the workshop day. The program, final speaker lineup, and reviewer application form will be announced separately. The program committee lists only members confirmed in the accepted proposal; tentative members are not listed. No sponsorship arrangements have been announced.
 
 ## Files and editing
 
@@ -24,11 +24,12 @@ The workshop accepts both archival and non-archival submissions and supports hyb
 | `dates.html` | Important dates: unconfirmed milestones are TBD |
 | `submissions.html` | Submission information and portal status |
 | `program.html` | Program and speaker announcements |
-| `organizers.html` | Organizer portraits and reviewer invitation |
+| `organizers.html` | Organizer portraits, program committee, and reviewer invitation |
 | `contact.html` | Official workshop contact details |
 | `assets/styles.css` | Layout, typography, responsive behavior, and print styles |
-| `assets/site.js` | Navigation enhancement |
+| `assets/site.js` | Navigation menu and organizer bio dialog |
 | `assets/favicon.svg` | Browser icon |
+| `assets/fonts/` | Self-hosted Newsreader and Atkinson Hyperlegible Next, with their SIL Open Font License files |
 | `assets/` | Shared public assets, including approved images when present |
 | `.nojekyll` | Direct static-file publication |
 | `scripts/check_site.py` | Offline link and asset check; requires Python 3 |
@@ -37,6 +38,12 @@ The workshop accepts both archival and non-archival submissions and supports hyb
 Edit the relevant HTML file directly; no build step follows. Keep shared navigation, the workshop title, contact details, and footer information consistent across the eight pages. The official contact address is `theuserplural@gmail.com`. When confirming information, update its status label, associated date or link, and explanatory note everywhere that information appears. Add the workshop-specific OpenReview URL only when it is ready. Preserve the accepted proposal's scientific framing when editing the overview and research themes.
 
 Use relative links such as `themes.html` and `assets/styles.css`, so the site works under the `/website/` project path. Keep all eight HTML pages in the repository root. The optional publication workflow lists those pages explicitly and copies the entire audited `assets/` directory. When adding another page, update that allowlist, the navigation, and the validation script as needed. Keep image credits and license notices with any approved photographs.
+
+## Design
+
+Headings use Newsreader; body text and navigation use Atkinson Hyperlegible Next, a typeface designed for legibility. Both are served from `assets/fonts/` rather than a font CDN, so pages load fully without third-party requests. Colors and type sizes are defined once at the top of `assets/styles.css`.
+
+The homepage illustration is an inline SVG in `index.html`. It is an illustration, not data: interactions that start from the same point diverge as users clarify, change goals, or leave, while a dashed line marks the “average” user. Its lines draw in once on page load; the animation is skipped for visitors who prefer reduced motion.
 
 ## Preview and check
 
@@ -76,7 +83,7 @@ The workflow uses GitHub's Pages actions and the `github-pages` environment. If 
 
 The homepage photograph is [Macau skyline from Taipa (2013)](https://commons.wikimedia.org/wiki/File:Macau_skyline_2013_(panorama).JPG), by [Mimihitam](https://commons.wikimedia.org/wiki/User:Mimihitam), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). The original file is included without modification and scaled proportionally for display. Preserve its visible attribution and `assets/photo-credit.txt`. This license applies to the photograph.
 
-Organizer portraits are copied from each organizer’s official profile, as requested by the workshop organizers. Preserve the profile links and the source records in `assets/organizers/sources.txt`; no reuse license is asserted for those portraits.
+Organizer portraits are copied from each organizer’s official profile, as requested by the workshop organizers. Each organizer’s bio sits in their card in `organizers.html`; with JavaScript, **Read bio** opens it in a dialog, and without JavaScript it shows inline. Preserve the profile links and the source records in `assets/organizers/sources.txt`; no reuse license is asserted for those portraits.
 
 Submission guidance follows the current [ARR call](https://aclrollingreview.org/cfp), [ACL formatting requirements](https://acl-org.github.io/ACLPUB/formatting.html), [official templates](https://github.com/acl-org/acl-style-files), [Responsible NLP checklist](https://aclrollingreview.org/responsibleNLPresearch/), and [ARR commitment guidance](https://aclrollingreview.org/authors#step-5-commitment). Maintain those links when requirements change. Ensure the direct-submission form includes the checklist fields.
 

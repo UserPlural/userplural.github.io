@@ -3,38 +3,110 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#255a78">
-  <meta name="description" content="Research themes — The User, Plural: Heterogeneity and Interaction in User Simulation. A one-day workshop co-located with COLING 2027 in Macau. Workshop date TBD.">
-  <title>Research themes | The User, Plural · COLING 2027</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Research themes for The User, Plural: Heterogeneity and Interaction in User Simulation, a one-day workshop at COLING 2027 in Macau, China.">
+  <title>Research themes | The User, Plural</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container masthead"><a class="site-name" href="index.html">The User, Plural</a><p>Co-located with COLING 2027 <span class="separator">·</span> Macau, China</p><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button></div>
-    <div class="nav-bar"><nav id="primary-nav" class="container" aria-label="Main navigation"><a href="index.html">Home</a>
-<a href="themes.html" aria-current="page">Research themes</a>
-<a href="cfp.html">Call for papers</a>
-<a href="dates.html">Important dates</a>
-<a href="submissions.html">Submissions</a>
-<a href="program.html">Program</a>
-<a href="organizers.html">Organizers</a>
-<a href="contact.html">Contact</a></nav></div>
-  </header>
-  <main id="main" class="container interior"><div class="page-heading"><p class="breadcrumb"><a href="index.html">Home</a> / Research themes</p><h1>Research themes</h1></div>
-
-    <div class="reading-width">
-      <p>The workshop is organized around four connected research directions from the accepted proposal. Across these directions, interactional fidelity and user heterogeneity are central to understanding when simulated users are valid proxies for real users.</p>
-      <section class="topic-section"><h2>1. Capabilities and Uses</h2><p>What can simulated users reliably do? Relevant uses include data generation, system training, failure discovery, benchmarking, personalization, and scientific inquiry.</p><ul><li>Controllability and generalization across systems and domains.</li><li>Offline uses and interactive settings in which user and system behaviors evolve together.</li><li>Simulation through text, speech, multimodal interfaces, and tools.</li></ul></section>
-      <section class="topic-section"><h2>2. Human–Simulator Gaps</h2><p>Which differences between people and simulators matter for a given use? We focus on behavior over time and variation beyond an “average” user.</p><ul><li><strong>Interactional fidelity:</strong> clarification, selective disclosure, state changes, goal revision, and abandonment.</li><li><strong>User heterogeneity:</strong> variation across language, culture, accessibility, expertise, preferences, and user state.</li><li>Within-group and intersectional variation, rare goals, and long-tail behaviors.</li></ul></section>
-      <section class="topic-section"><h2>3. Evaluation and Validation</h2><p>What evidence supports a simulator’s intended use? Evaluation should match the claim being made about interaction trajectories, population distributions, rare events, or downstream system rankings.</p><ul><li>Human evidence appropriate to the intended use and target users.</li><li>Validation units and uncertainty.</li><li>Transfer assumptions, sim-to-real gaps, and mismatches that could change a conclusion.</li></ul></section>
-      <section class="topic-section"><h2>4. Responsible and Real-World Use</h2><p>When should simulation inform decisions? This direction addresses privacy, consent, stereotyping, transparency, misuse, and the limits of replacing human participation.</p><ul><li>Human validation involving affected communities.</li><li>Underrepresented users and consequential decisions.</li><li>Simulation that complements human participation, with its limitations made explicit.</li></ul></section>
-      <section class="topic-section"><h2>Scope</h2><p>The workshop includes offline and interactive uses of user simulation. Multi-agent work is in scope when its primary object is user behavior or user-facing AI. Macro-scale social simulation is outside the workshop’s scope.</p><p>See the <a href="cfp.html">call for papers</a> and <a href="submissions.html">submissions</a> pages for submission requirements and updates.</p></section>
+    <div class="wrap header-bar">
+      <a class="wordmark" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M4 13C11 13 14 5 23 4"/><path class="mark-average" d="M4 13H23"/><path d="M4 13C11 13 13 21 21 22"/><circle cx="4" cy="13" r="2.6"/></svg>The User, Plural</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button>
+      <nav id="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="themes.html" aria-current="page">Research themes</a>
+        <a href="cfp.html">Call for papers</a>
+        <a href="dates.html">Important dates</a>
+        <a href="submissions.html">Submissions</a>
+        <a href="program.html">Program</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-
+  </header>
+  <main id="main" class="interior">
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Research themes</h1>
+      <p class="standfirst">Four connected research directions from the accepted proposal. Across them, interactional fidelity and user heterogeneity are central to understanding when simulated users are valid proxies for real users.</p>
+      </div>
+    </header>
+    <div class="wrap">
+      <section class="section" aria-labelledby="capabilities">
+        <div class="section-head"><span class="theme-number">1</span><h2 id="capabilities">Capabilities and Uses</h2></div>
+        <div class="section-body">
+          <p class="lead">What can simulated users reliably do?</p>
+          <p>Relevant uses include data generation, system training, failure discovery, benchmarking, personalization, and scientific inquiry.</p>
+          <ul>
+            <li>Controllability and generalization across systems and domains.</li>
+            <li>Offline uses and interactive settings in which user and system behaviors evolve together.</li>
+            <li>Simulation through text, speech, multimodal interfaces, and tools.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="gaps">
+        <div class="section-head"><span class="theme-number">2</span><h2 id="gaps">Human–Simulator Gaps</h2></div>
+        <div class="section-body">
+          <p class="lead">Which differences matter?</p>
+          <p>Which differences between people and simulators matter for a given use? We focus on behavior over time and on variation beyond an “average” user.</p>
+          <ul>
+            <li><strong>Interactional fidelity:</strong> whether simulators preserve clarification, selective disclosure, state changes, goal revision, and abandonment over time. Fluent responses are insufficient when roles or goals drift.</li>
+            <li><strong>User heterogeneity:</strong> variation across language, culture, accessibility, expertise, preferences, and user state.</li>
+            <li>Within-group and intersectional variation, rare goals and behaviors, accessibility needs, and changing user states that average-user simulators often erase.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="evaluation">
+        <div class="section-head"><span class="theme-number">3</span><h2 id="evaluation">Evaluation and Validation</h2></div>
+        <div class="section-body">
+          <p class="lead">What evidence makes a simulator trustworthy?</p>
+          <p>Because simulator validity is use-dependent, evaluation must match the claim a simulator is meant to support, whether about interaction trajectories, population distributions, rare events, or downstream system rankings.</p>
+          <ul>
+            <li>Human evidence appropriate to the intended use and target users.</li>
+            <li>Validation units and uncertainty.</li>
+            <li>Transfer assumptions and sim-to-real gaps.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="responsible">
+        <div class="section-head"><span class="theme-number">4</span><h2 id="responsible">Responsible and Real-World Use</h2></div>
+        <div class="section-body">
+          <p class="lead">When should simulation inform decisions?</p>
+          <p>This direction addresses privacy, consent, stereotyping, transparency, misuse, and the limits of replacing human participation.</p>
+          <ul>
+            <li>Simulated users that complement, rather than silently substitute for, affected communities.</li>
+            <li>Fit-for-purpose human validation, especially for underrepresented populations and consequential decisions.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="scope">
+        <div class="section-head"><h2 id="scope">Scope</h2></div>
+        <div class="section-body">
+          <p>The workshop includes offline and interactive uses of user simulation. Multi-agent work is in scope when its primary object is user behavior or user-facing AI. Macro-scale social simulation is outside the workshop’s scope.</p>
+          <p>See the <a href="cfp.html">call for papers</a> and <a href="submissions.html">submission information</a> for requirements and updates.</p>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><p><strong>The User, Plural · COLING 2027</strong><br>Heterogeneity and Interaction in User Simulation</p><p><a href="mailto:theuserplural@gmail.com">theuserplural@gmail.com</a><br><a href="https://github.com/UserPlural/website">Website source</a> <span class="separator">·</span> Updated October 14, 2026</p></div></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-title">The User, Plural</p>
+        <p>Heterogeneity and Interaction in User Simulation<br>A one-day workshop at COLING 2027 in Macau, China</p>
+      </div>
+      <div>
+        <p><a href="mailto:theuserplural@gmail.com">theuserplural@gmail.com</a></p>
+      </div>
+      <div>
+        <p><a href="https://github.com/UserPlural/website">Website source</a></p>
+        <p>Updated October 14, 2026</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 Organizer portraits
-Downloaded from the organizers' official profiles on October 14, 2026 at the workshop organizer's request. The image files are unchanged. The website displays circular crops through CSS. All rights remain with the original rights holders; no new license is asserted for these portraits.
+Downloaded from the organizers' official profiles on October 14, 2026 at the workshop organizer's request. The image files are unchanged. The website displays 4:5 crops through CSS. All rights remain with the original rights holders; no new license is asserted for these portraits.
 
 Ziwei (Sara) Gong — ziwei-gong.jpg
 Profile: https://ziweig.github.io/ziweigong/
