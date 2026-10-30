@@ -88,7 +88,10 @@ h3{font-size:20px;margin:1.6em 0 .5em}
 .section-head p{max-width:22em;margin:14px 0 0;color:var(--ink-soft)}
 .section-body{max-width:40em}
 .section-body>:last-child{margin-bottom:0}
-.dates-section{display:block}
+.dates-page .wrap{max-width:960px}
+.dates-page .page-head{padding-block:40px 28px}
+.dates-page .notice{max-width:none;margin-top:16px;padding:0;border:0;background:none;font-size:17px;color:var(--ink-soft)}
+.dates-section{display:block;padding-block:32px 24px}
 .dates-section .section-body{max-width:none}
 .section-body ul:not([class]){margin:0 0 1.2em;padding-left:1.2em}
 .section-body ul:not([class])>li{margin-bottom:.45em;padding-left:.2em}
@@ -129,18 +132,13 @@ main{display:block}
 table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5}
 th,td{padding:16px 0;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
 .details th{width:36%;padding-right:24px;font-weight:650}
-.timeline{margin-bottom:24px}
-.timeline thead th{padding:0 0 10px;border-bottom:1px solid var(--ink);font-size:15px;font-weight:400;color:var(--ink-soft)}
-.timeline thead th:last-child,.timeline td{text-align:right}
-.timeline tbody th{position:relative;padding:18px 24px 18px 36px;font-weight:400;vertical-align:baseline}
-.timeline tbody th::after{content:"";position:absolute;left:9px;top:0;bottom:0;width:1px;background:var(--rule)}
-.timeline tbody th::before{content:"";position:absolute;z-index:1;left:4px;top:24px;width:11px;height:11px;border:2px solid var(--cobalt);border-radius:50%;background:var(--paper)}
-.timeline tbody tr:first-child th::after{top:24px}
-.timeline tbody tr:last-child th::after{bottom:auto;height:24px}
-.timeline .confirmed th::before{background:var(--cobalt)}
-.timeline td{padding:16px 0;font:450 19px/1.4 var(--serif);white-space:nowrap;vertical-align:baseline}
+.timeline{table-layout:fixed;margin-bottom:22px;font-size:17px;line-height:1.5}
+.timeline thead th{padding:0 0 12px;border-bottom:1px solid var(--ink);font-size:15px;font-weight:500;color:var(--ink-soft)}
+.timeline thead th:first-child{width:64%}
+.timeline thead th:last-child{padding-left:28px}
+.timeline tbody th{padding:20px 28px 20px 0;font-weight:400;vertical-align:middle}
+.timeline td{padding:20px 0 20px 28px;font:500 17px/1.5 var(--sans);vertical-align:middle}
 .timeline .tbd{color:var(--ink-soft)}
-.timeline .status{margin-left:8px;font-size:14px;color:var(--ink-soft)}
 
 /* Organizers and program committee */
 .organizer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 28px;margin:0;padding:0;list-style:none}
@@ -223,8 +221,6 @@ th,td{padding:16px 0;border-bottom:1px solid var(--rule);text-align:left;vertica
   .facts dd{font-size:21px}
   .details th{width:40%;padding-right:14px}
   table{font-size:15px}
-  .timeline td{font-size:18px}
-  .timeline .status{display:block;margin-left:0}
   .organizer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
   .bio-dialog{width:100%;max-width:100%;max-height:88vh;margin:auto 0 0;border-radius:12px 12px 0 0}
   .bio-card{grid-template-columns:88px minmax(0,1fr);grid-template-areas:"photo head" "body body";align-items:end;gap:20px 18px;padding:32px 20px 20px}
@@ -234,6 +230,23 @@ th,td{padding:16px 0;border-bottom:1px solid var(--rule);text-align:left;vertica
   .bio-nav{padding:14px 20px 18px}
   .committee{grid-template-columns:minmax(0,1fr)}
   .city figcaption{text-align:left}
+}
+@media (max-width:600px){
+  .dates-page .page-head{padding-block:32px 24px}
+  .dates-page .notice{font-size:16px}
+  .dates-section{padding-block:24px}
+  .timeline thead,.timeline tbody,.timeline tr,.timeline th,.timeline td{display:block}
+  .timeline thead th:first-child{width:auto;padding-bottom:12px}
+  .timeline thead th:last-child{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .timeline tbody tr{padding:18px 0;border-bottom:1px solid var(--rule)}
+  .timeline tbody th,.timeline td{padding:0;border:0;font-size:17px;text-align:left}
+  .timeline td{margin-top:6px;color:var(--ink-soft);font-weight:400}
+}
+@media (max-width:380px){
+  .header-bar{column-gap:10px}
+  .wordmark{gap:8px;font-size:20px}
+  .mark{width:22px;height:22px}
+  .menu-toggle{padding:7px 10px}
 }
 @media (prefers-reduced-motion:reduce){
   .bio-dialog[open],.bio-dialog[open]::backdrop{animation:none}
