@@ -2,6 +2,7 @@
 """Validate the workshop's static pages and local links, without dependencies."""
 
 from collections import Counter
+from datetime import date
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -230,7 +231,7 @@ def check_navigation(page, origin):
 
 
 def check_dates(page):
-    """Only the COLING conference has confirmed dates; other milestones are TBD."""
+    """Dates use valid machine-readable values; unannounced items remain TBD/TBA."""
     rows = [row for row in page.table_rows if any(cell["tag"] == "td" for cell in row)]
     if not rows:
         errors.append("dates.html: missing milestone table")
@@ -240,11 +241,19 @@ def check_dates(page):
             errors.append("dates.html: milestone row needs an event and date")
             continue
         event = " ".join("".join(row[0]["text"]).split())
-        if "coling" in event.lower() and "conference" in event.lower():
+        value = " ".join("".join(row[1]["text"]).split())
+        datetimes = row[1]["datetimes"]
+        if value.upper() in ("TBD", "TBA"):
+            if datetimes:
+                errors.append(f"dates.html: unannounced milestone has a date: {event}")
             continue
-        date = " ".join("".join(row[1]["text"]).split())
-        if date.upper() != "TBD" or any(cell["datetimes"] for cell in row):
-            errors.append(f"dates.html: unconfirmed milestone must use TBD: {event}")
+        if not datetimes:
+            errors.append(f"dates.html: announced date needs a time element: {event}")
+        for stamp in datetimes:
+            try:
+                date.fromisoformat(stamp)
+            except ValueError:
+                errors.append(f"dates.html: invalid date {stamp!r}: {event}")
 
 
 for name in PUBLIC_FILES:
@@ -305,5 +314,5 @@ if errors:
     sys.exit(1)
 
 print("PASS: eight pages, unique titles, landmarks, navigation, official contact,")
-print("      local assets, cross-page fragments, relative paths, and TBD milestones.")
+print("      local assets, cross-page fragments, relative paths, and milestone dates.")
 print("This check does not verify external URLs or confirm workshop facts.")
