@@ -88,6 +88,8 @@ h3{font-size:20px;margin:1.6em 0 .5em}
 .section-head p{max-width:22em;margin:14px 0 0;color:var(--ink-soft)}
 .section-body{max-width:40em}
 .section-body>:last-child{margin-bottom:0}
+.dates-section{display:block}
+.dates-section .section-body{max-width:none}
 .section-body ul:not([class]){margin:0 0 1.2em;padding-left:1.2em}
 .section-body ul:not([class])>li{margin-bottom:.45em;padding-left:.2em}
 .section-body ul:not([class])>li::marker{color:var(--cobalt)}
